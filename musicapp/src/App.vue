@@ -1,24 +1,28 @@
 <template>
   <div id="app">
-    <m-header></m-header>
-    <tab></tab>
     <router-view/>
   </div>
 </template>
 
 <script>
-import mHeader from '@/components/my-header/myHeader'
-import Tab from '@/components/tab/tab'
-export default {
-  name: 'App',
-  components: {
-    mHeader,
-    Tab
-  }
-}
+
 </script>
 
 <style>
+@font-face {
+  font-family: 'iconfont';  /* project id 654350 */
+  src: url('//at.alicdn.com/t/font_654350_co5zlgeho2b.eot');
+  src: url('//at.alicdn.com/t/font_654350_co5zlgeho2b.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_654350_co5zlgeho2b.woff') format('woff'),
+  url('//at.alicdn.com/t/font_654350_co5zlgeho2b.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_654350_co5zlgeho2b.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 #app{
   background: #222;
   height: 100vh;

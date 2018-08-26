@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import recommend from '@/components/recommend/recommend'
-import singer from '@/components/singer/singer'
-import rank from '@/components/rank/rank'
-import search from '@/components/search/search'
+import recommend from '@/pages/recommend/recommend'
+import singer from '@/pages/singer/singer'
+import rank from '@/pages/rank/rank'
+import search from '@/pages/search/search'
+import login from '@/pages/login/login'
+import songList from '@/pages/songList/songList'
+import songdesc from '@/pages/songdesc/songdesc'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -23,6 +26,18 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: search
+    }, {
+      path: '/login',
+      name: 'login',
+      component: login
+    }, {
+      path: '/songList',
+      name: 'songList',
+      component: songList
+    }, {
+      path: '/songdesc',
+      name: 'songdesc',
+      component: songdesc
     }
   ]
 })

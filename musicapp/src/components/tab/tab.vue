@@ -1,7 +1,7 @@
 <template>
   <div class="tab">
     <div class="tab-item" v-for="(item,index) in tabItem" :key="index"
-         @click="handleClick(index)" :class="cur_index === index ? 'on' : ''">
+         @click="handleClick(index)" :class="choice === index ? 'on' : ''">
       {{item}}
     </div>
   </div>
@@ -10,14 +10,14 @@
 export default {
   data () {
     return {
-      tabItem: ['推荐', '歌手', '排行', '搜索'],
-      cur_index: 0
+      tabItem: ['推荐', '歌手', '排行', '搜索']
     }
+  },
+  props: {
+    choice: Number
   },
   methods: {
     handleClick (_index) {
-      this.cur_index = _index
-      console.log(_index)
       if (_index === 0) {
         this.$router.push({path: '/recommend'})
       } else if (_index === 1) {
@@ -34,9 +34,11 @@ export default {
 <style lang="scss" scoped>
 .tab{
   display: flex;
+  width: 100%;
   height: .44rem;
   line-height: .44rem;
   font-size: .14rem;
+  background: #333;
   .tab-item{
     color: #fff;
     flex: 1;

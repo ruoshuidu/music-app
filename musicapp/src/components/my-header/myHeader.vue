@@ -5,12 +5,22 @@
         <img src="./logo@2x.png" alt="">
       </div>
       <h1 class="text">Chicken Music</h1>
+      <i class="iconfont login" @click="toLogin()">&#xe602;</i>
     </header>
   </div>
 </template>
 <script>
 export default {
+  data () {
+    return {
 
+    }
+  },
+  methods: {
+    toLogin () {
+      this.$router.push({path: '/login'})
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -20,11 +30,14 @@ export default {
   .header{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: .44rem;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding:0 .10rem;
+     height: .44rem;
     .icon{
-      width: 0.35rem;
-      height: 0.36rem;
+      width: 0.25rem;
+      height: 0.26rem;
       overflow: hidden;
       img{
         width: 100%;
@@ -33,8 +46,10 @@ export default {
     }
     .text{
       font-size: .14rem;
-      margin-left: .05rem;
       font-weight: normal;
+    }
+    .login{
+      font-size: .23rem;
     }
   }
 }
